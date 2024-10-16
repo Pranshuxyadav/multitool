@@ -1,0 +1,38 @@
+@echo off
+title MultiTool - by YourName
+color 0e
+
+:: Display the title using ASCII art
+echo                [38;2;255;182;193m███╗   ███╗██╗   ██╗██╗  ████████╗██╗   ████████╗ ██████╗  ██████╗ ██╗     
+echo                [38;2;255;192;203m████╗ ████║██║   ██║██║  ╚══██╔══╝██║   ╚══██╔══╝██╔═══██╗██╔═══██╗██║     
+echo                [38;2;255;182;193m██╔████╔██║██║   ██║██║     ██║   ██║█████╗██║   ██║   ██║██║   ██║██║     
+echo                [38;2;255;174;185m██║╚██╔╝██║██║   ██║██║     ██║   ██║╚════╝██║   ██║   ██║██║   ██║██║     
+echo                [38;2;255;160;175m██║ ╚═╝ ██║╚██████╔╝███████╗██║   ██║      ██║   ╚██████╔╝╚██████╔╝███████╗
+echo                [38;2;255;240;245m╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝   ╚═╝      ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝
+echo.
+
+:: Display the list of applications
+echo (1) Process Hacker 2
+echo (2) Wireshark
+echo (3) Virtualbox
+echo (4) Putty
+echo.
+
+:: Prompt the user to enter a number
+set /p choice=Please enter a number to open the application: 
+
+:: Launch the corresponding application
+if %choice%==1 (
+    start "" "C:\Program Files\Process Hacker 2\ProcessHacker.exe"
+) else if %choice%==2 (
+    start "" "C:\Program Files\Wireshark\Wireshark.exe"
+) else if %choice%==3 (
+    start "" "C:\Program Files\Oracle\VirtualBox\VirtualBox.exe"
+) else if %choice%==4 (
+    start "" "C:\Program Files\PuTTY\putty.exe"
+) else (
+    echo Invalid choice, please run the script again.
+)
+
+pause
+exit
